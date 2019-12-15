@@ -1,0 +1,50 @@
+--Jenkins Installation
+apt-get update
+To install JDK
+apt-get install default-jdk 
+To verify Java Installation
+java –-version
+
+
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+echo deb https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list
+
+apt-get update
+
+apt-get install jenkins
+
+--- dockar
+
+commands
+  list images in local registry
+	- docker images
+  List running containers
+	- docker os
+  create container
+	- docker run - to create a container, it will also pull images if not avalaible locally.
+  list all containers no matter what state 
+	- docker ps -a
+
+ A continaer will always be created from an image only.
+
+  Pull images
+	- 
+	- docker rm container_name/container_id - 
+
+docker run -it ubuntu /bin/bash - takes you to the container we created 
+docker inspect <<image_name>> - gives details about the image
+
+Install packages inside container
+
+
+docker run -it ubuntu - log into your container
+mkdir test
+cd test
+vi 1file
+apt-get update
+apt-get install vim
+
+detach mode - to keep the container running 
+
+docker run -d nginx
+
